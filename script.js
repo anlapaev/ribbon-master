@@ -7,7 +7,10 @@ let current_index = 0;
 
 let interval_id;
 
-
+function checkTimeAndPlay() {
+  var x = document.getElementById("myVideo");
+  x.play();
+}
 
 const checkFirstImage = (index) => {
   if (index === -1) {
@@ -38,7 +41,7 @@ const changeImage = () => {
     clearInterval(interval_id);
     
   }
-  
+  setTimeout(checkTimeAndPlay, 3800);
 };
 
 const onRibbonClick = (event) => {
@@ -50,11 +53,8 @@ const onRibbonClick = (event) => {
 ribbon.addEventListener("pointerdown", onRibbonClick);
 
 
-function checkTimeAndPlay() {
-  var x = document.getElementById("myVideo");
-  x.play();
-}
-setTimeout(checkTimeAndPlay, 4900);
+
+
 
 /*
 function myFunction() {
