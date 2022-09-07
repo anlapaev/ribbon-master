@@ -9,6 +9,7 @@ let interval_id;
 
 function checkTimeAndPlay() {
   var x = document.getElementById("myVideo");
+  x.style.visibility='visible'
   x.play();
 }
 
